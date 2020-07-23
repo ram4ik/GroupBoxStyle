@@ -9,7 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!").padding()
+        VStack(spacing: 20) {
+            
+            Text("No Style")
+            
+            GroupBox(label: Text("Username"), content: {
+                Text("SwiftUI")
+            })
+            
+            Divider()
+            
+            Text("Custom GroupBox Style")
+            
+            GroupBox(label: Text("Username"), content: {
+                Text("SwiftUI")
+            }).groupBoxStyle(DefaultGroupBoxStyle())
+        }
     }
 }
 
